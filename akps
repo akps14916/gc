@@ -39,3 +39,50 @@ RUN-->
 TERMINAL 1-> py receiver.py
 TERMINAL 2-> py receiver.py
 TERMINAL 3-> py sender.py
+
+
+
+
+Definition
+Group communication is a communication method where a single sender transmits data to multiple receivers simultaneously.
+
+🔸 Concept
+In this implementation, group communication is achieved using UDP broadcast, where:
+
+Sender sends data to a broadcast address
+All receivers listening on the same port receive the message
+
+
+
+🔸 Working
+Sender creates a UDP socket
+Broadcast option is enabled
+Message is sent to broadcast address (<broadcast>)
+All receivers bound to the same port receive the message
+Receivers display the received data
+
+🔸 Features
+One-to-many communication
+Connectionless (UDP)
+Fast and efficient
+No need to maintain connections
+
+🔸 Advantages
+✔ Simple implementation
+✔ Works without internet (LAN/local system)
+✔ Supports multiple receivers
+✔ No complex configuration
+
+🔸 Disadvantages
+❌ No reliability (UDP)
+❌ No guarantee of delivery
+❌ Can cause network congestion
+
+🔸 Applications
+Chat applications
+Online multiplayer systems
+Notification systems
+Distributed systems
+
+
+👉 “In broadcast communication, a single message is delivered to all devices in the network segment listening on the specified port.”
